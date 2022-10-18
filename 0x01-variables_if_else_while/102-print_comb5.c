@@ -7,7 +7,7 @@
 int main(void)
 {
 	int m, i;
-	
+
 	for (m = 0; m < 99; m++)
 	{
 		for (i = 0; i <= 99; i++)
