@@ -1,9 +1,8 @@
 #include "main.h"
 
-/*
- * _isupper - Returns "1" if letter entered is an
- * uppercase
- * @c: single letter character to be entered
+/**
+ * _isupper - Checks if character inputed is uppercase.
+ * @c: single letter character to be entered.
  * Return: returns 1 if it is an uppercase.
  */
 
