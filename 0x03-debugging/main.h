@@ -1,7 +1,5 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
-
-#include <stdio.h>
+#ifndef MAIN_H_
+#define MAIN_H_
 
 void positive_or_negative(int i);
 

@@ -5,7 +5,6 @@
  * when given a value of 0.
  * Return: returns 0 if successful.
  */
-
 int main(void)
 {
 	int i;
