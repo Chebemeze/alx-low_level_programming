@@ -17,7 +17,7 @@ void print_remaining_days(int month, int day, int year)
 	if ((year % 4 == 0 || year % 400 == 0) && (year % 100 == 0))
 	{
 
-		if (month == 12 && day == 365)
+		if (month >= 3 && day >= 60)
 		{
 			newday = day + 1;
 			printf("Day of the year: %d\n", newday);
