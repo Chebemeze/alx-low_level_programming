@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int i, j, - Prints triange using "#" character.
+ * print_triangle - Prints triange using "#" character.
  *
  * @size:  this is the size of the triangle. a value
  * will be given
