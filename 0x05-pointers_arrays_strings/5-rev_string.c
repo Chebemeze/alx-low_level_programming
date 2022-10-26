@@ -18,7 +18,7 @@ void rev_string(char *s)
 	{
 		f++;
 	}
-	f--
+	f--;
 	l = f / 2;
 	while (f > l)
 	{
