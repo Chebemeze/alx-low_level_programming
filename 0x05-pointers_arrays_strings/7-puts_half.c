@@ -10,6 +10,7 @@ void puts_half(char *str)
 {
 	int k, l;
 
+	k = 0;
 	while (str[k])
 	{
 		k++;
