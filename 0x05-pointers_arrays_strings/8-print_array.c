@@ -1,5 +1,5 @@
-#include "main.h"
-
+#include "#main.h"
+#include <stdio.h>
 /**
  * print_array - prints members of an array,
  * separated by comma, and followed by a new line
