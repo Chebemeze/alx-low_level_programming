@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _puts - prints string in a reverse manner
+ * print_rev - prints string in a reverse manner
  * when called by the main function
- * @str: the string given and to be printed.
+ * @s: the string given and to be printed.
  */
 
 void print_rev(char *s)
