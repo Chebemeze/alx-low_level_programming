@@ -16,7 +16,10 @@ char *cap_string(char *e)
 	j = 0;
 	while (e[j])
 	{
-		tab = e[j - 1];
+		if (j > 0)
+		{
+			tab = e[j - 1];
+		}
 		if (e[j] >= 'a' && e[j] <= 'z')
 		{
 			if (tab == '\n' || tab == ' ' || tab == ',' || tab == '!')
