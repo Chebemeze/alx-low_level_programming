@@ -2,7 +2,7 @@
 
 /**
  * cap_string - Capitalizes words found after seprator of words(e.g "," "\n"
- * "!!" etc)
+ * "!!" etc).
  * @e: point variable
  * Return: returns the new capitalized string.
  */
@@ -10,27 +10,27 @@
 char *cap_string(char *e)
 {
 	int j;
-	char tab;
+	char s;
 
 	tab = '\0';
-	j = 0;
+	s = 0;
 	while (e[j])
 	{
 		if (j > 0)
 		{
-			tab = e[j - 1];
+			s = e[j - 1];
 		}
 		if (e[j] >= 'a' && e[j] <= 'z')
 		{
-			if (tab == '\n' || tab == ' ' || tab == ',' || tab == '!')
+			if (s == '\n' || s == ' ' || s == ',' || s == '!')
 			{
 				e[j] = e[j] - 32;
 			}
-			else if (tab == ';' || tab == '\t' || tab == '{' || tab == '}')
+			else if (s == ';' || s == '\t' || s == '{' || s == '}')
 			{
 				e[j] = e[j] - 32;
 			}
-			else if (tab == ')' || tab == '(' || tab == '.' || tab == 0)
+			else if (s == ')' || s == '(' || s == '.' || j == 0)
 			{
 				e[j] = e[j] - 32;
 			}
