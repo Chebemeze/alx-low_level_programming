@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cap_string - Capitalizes words found after seprator of words(e.g "," "\n"
+ * cap_string - Capitalizes words found after seprator of words(",",
  * "!!" etc).
  * @e: point variable
  * Return: returns the new capitalized string.
@@ -12,8 +12,8 @@ char *cap_string(char *e)
 	int j;
 	char s;
 
-	tab = '\0';
-	s = 0;
+	s = '\0';
+	j = 0;
 	while (e[j])
 	{
 		if (j > 0)
@@ -35,8 +35,8 @@ char *cap_string(char *e)
 				e[j] = e[j] - 32;
 			}
 		}
-		j++
+		j++;
 	}
 
-	return (p);
+	return (&e[0]);
 }
