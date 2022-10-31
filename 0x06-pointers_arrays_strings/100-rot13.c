@@ -11,12 +11,12 @@ char *rot13(char *s)
 {
 	int i, j;
 
-	char e[] = "ANBOCPDQERFSGTHUIVJWKXLYMZ";
-	char z[] = "NAOBPCQDRESFTGUHVIWJXKYLZM";
+	char e[] = "ANBOCPDQERFSGTHUIVJWKXLYMZanbocpdqerfsgthuivjwkxlymz";
+	char z[] = "NAOBPCQDRESFTGUHVIWJXKYLZMnaobpcqdresftguhviwjxkylzm";
 
 	for (i = 0; s[i]; i++)
 	{
-		for (j = 0; j <= 25; j++)
+		for (j = 0; j <= 51; j++)
 		{
 			if (e[j] == s[i])
 			{
