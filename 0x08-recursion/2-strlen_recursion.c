@@ -10,8 +10,8 @@ int _strlen_recursion(char *s)
 {
 	int str_length;
 
-	str_length = 0;
-	if ((s + 1) != '\0')
+	str_length = 0i;
+	if (s != '\0')
 	{
 		strlength++;
 		str_length += _strlen_recursion(s + 1);
