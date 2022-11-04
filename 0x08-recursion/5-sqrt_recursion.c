@@ -29,7 +29,7 @@ int _sqrt_recursion(int n)
 
 int _sqrt(int i, int j)
 {
-	if (i > x / 2)
+	if (i > j / 2)
 	{
 		return (-1);
 	}
