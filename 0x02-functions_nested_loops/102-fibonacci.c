@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 0; i < 50; i++)
 	{
-		if (i < 48)
+		if (i < 49)
 		{
 			printf("%lu, ", j);
 		}
