@@ -17,7 +17,6 @@ void print_square(int size)
 			{
 				_putchar('#');
 			}
-			
 			if (x == size - 1)
 			{
 				continue;
