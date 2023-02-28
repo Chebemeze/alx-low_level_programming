@@ -11,7 +11,8 @@
 
 int _atoi(char *s)
 {
-	int i, b, precedent, total;
+	int i, b, precedent;
+	unsigned int total;
 
 	precedent = 0;
 	total = 0;
