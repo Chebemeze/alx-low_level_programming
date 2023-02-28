@@ -25,8 +25,8 @@ int _atoi(char *s)
 		}
 		if (isdigit(s[i]))
 		{
-      			total = (total * 10) + s[i] - '0';
- 		}
+			total = (total * 10) + s[i] - '0';
+		}
 		if (s[i] == '+')
 		{
 			precedent++;
@@ -40,7 +40,7 @@ int _atoi(char *s)
 	{
 		total = -total;
 	}
-	else if (precedent > 0)
+	else
 	{
 		total = total;
 	}
