@@ -11,7 +11,7 @@ char *rot13(char *s)
 {
 	int i, j;
 
-	char e[] = "AbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char e[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char z[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (i = 0; *(s + i); i++)
@@ -25,5 +25,6 @@ char *rot13(char *s)
 			}
 		}
 	}
+
 	return (s);
 }
