@@ -14,7 +14,7 @@ int _atoi(char *s)
 	int i, b, decrease, precedent;
 	unsigned int total;
 
-        decrease = 0;
+	decrease = 0;
 	precedent = 0;
 	total = 0;
 	b = strlen(s);
@@ -46,10 +46,9 @@ int _atoi(char *s)
 	{
 		total = -1 * total;
 	}
-        else if (precedent < decrease)
-        {
-                total = -total;
-        }
-
+	else if (precedent < decrease)
+	{
+		total = -total;
+	}
 	return (total);
 }
