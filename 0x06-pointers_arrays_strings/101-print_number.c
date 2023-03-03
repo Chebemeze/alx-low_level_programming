@@ -13,8 +13,8 @@ void print_number(int n)
 	division_num = 1;
 	if (n < 0)
 	{
-	j = -n;
-	_putchar('-');
+		j = -n;
+		_putchar('-');
 	}
 	else
 	{
