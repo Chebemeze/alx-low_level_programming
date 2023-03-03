@@ -13,10 +13,11 @@ void print_number(int n)
 	division_num = 1;
 	if (n < 0)
 	{
-		j = -n;
+		n = n * -1;
 		_putchar('-');
+		j = n;
 	}
-	else
+	else if (n >= 0)
 	{
 		j = n;
 	}
