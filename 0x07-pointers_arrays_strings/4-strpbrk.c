@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _strpbrk - locates the first occurrence in the string s of any
@@ -12,11 +11,21 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i, j;
+	unsigned int i, j, p, q;
 
-	for (i = 0; i < strlen(s); i++)
+	p = 0, q = 0;
+	while (s[p] != '\0')
 	{
-		for (j = 0; j < strlen(accept); j++)
+		p++;
+	}
+	while (accept[q]  != '\0')
+	{
+		q++;
+	}
+
+	for (i = 0; i < p; i++)
+	{
+		for (j = 0; j < q; j++)
 		{
 			if (s[i] == accept[j])
 			{
@@ -25,15 +34,9 @@ char *_strpbrk(char *s, char *accept)
 		}
 		if (s[i] == accept[j])
 		{
-			break;
+			return (&s[i]);
 		}
 	}
-	if (s[i] == accept[j])
-	{
-		return (&s[i]);
-	}
-	else
-	{
-		return (NULL);
-	}
+
+	return (0);
 }

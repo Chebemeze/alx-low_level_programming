@@ -11,7 +11,7 @@
 int main(void)
 {
 	char *s = "hello, world";
-	char *f = "sat";
+	char *f = "world";
 	char *t;
 
 	t = _strpbrk(s, f);
