@@ -8,17 +8,19 @@
 
 void print_number(int n)
 {
-	unsigned int division_num, j;
+	unsigned int division_num, p,  j;
 
 	division_num = 1;
 	if (n < 0)
 	{
 		j = -n;
 		_putchar('-');
+		p = j;
 	}
 	else
 	{
 		j = n;
+		p = j;
 	}
 
 	while (j >= 10)
@@ -28,7 +30,7 @@ void print_number(int n)
 	}
 	while (division_num > 0)
 	{
-		_putchar(((n / division_num) % 10) + '0');
+		_putchar(((p / division_num) % 10) + '0');
 		division_num = division_num / 10;
 	}
 }
