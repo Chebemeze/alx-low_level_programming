@@ -12,6 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int i, mul;
+
 	if (argc > 1 && argc <= 3)
 	{
 		mul = 1;
