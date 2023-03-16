@@ -23,6 +23,10 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
+	i += 1;
+	/**
+	 *accounts for the null byte, i want to also account for it(using malloc)
+	 */
 	p = (char *) malloc(sizeof(char) * i);
 	if (p == NULL)
 	{
