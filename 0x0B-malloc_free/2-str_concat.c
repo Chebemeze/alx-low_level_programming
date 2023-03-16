@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup -  concatenates two strings.
+ * str_concat - concatenates two strings.
  * @s1: first string given.
  * @s2: second string given.
  * Return: pointer or null.
@@ -11,20 +11,21 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *p;
-
 	unsigned int i, m, n, j;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
 		return (0);
 	}
 
-	i = 0;
-	while (s1[i])
-	{
-		i++;
-	}
+	else if (s1 == NULL)
+		return (s2);
+	else if (s2 == NULL)
+		return (s1);
 
+	for (i = 0; s1[i]; i++)
+	{
+	}
 	for (m = 0; s2[m]; m++)
 	{
 	}
@@ -35,7 +36,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (0);
 	}
-
 	for (j = 0; j < n; j++)
 	{
 		if (j < i)
@@ -48,7 +48,5 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 	*(p + j) = '\0';
-
 	return (p);
-
 }
