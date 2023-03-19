@@ -10,8 +10,7 @@
 
 int *array_range(int min, int max)
 {
-	int *p;
-	int i,  size;
+	int *p, size, i;
 
 	if (min > max)
 	{
@@ -19,19 +18,18 @@ int *array_range(int min, int max)
 	}
 
 	size = max - min;
-	size += 2;
-	p = calloc(size, sizeof(int));
+	size ++;
+	p = malloc(sizeof(int) * size);
 	if (p == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i <= size && min <= size; i++)
+	for (i = 0; i < size; i++)
 	{
 		*(p + i) = min;
 		min++;
 	}
-	*(p + i) = '\0';
 
 	return (p);
 }
