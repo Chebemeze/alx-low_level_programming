@@ -4,7 +4,7 @@
 /**
  * _calloc - A function that allocates memory for an raay
  * @nmemb: number of elements in array.
- * @zize: size of the array.
+ * @size: size of the array.
  * Return: returns the address of the allocated memory.
  */
 
