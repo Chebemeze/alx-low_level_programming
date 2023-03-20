@@ -10,16 +10,26 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+	void *newb;
+
 	if (new_size == old_size)
 		return (ptr);
 	if (ptr == NULL)
-		ptr = malloc(new_size);
+	{
+		newb = ptr;
+		newb = malloc(new_size);
+		free(ptr);
+	}
 	if (ptr != NULL && new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
 	else
-		ptr = malloc(new_size);
-	return (ptr);
+	{
+		newb = ptr;
+		newb = malloc(new_size);
+		free(ptr);
+	}
+	return (newb);
 }
