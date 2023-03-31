@@ -40,14 +40,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	temp->next = NULL;
 
 	if (*head == NULL)
-		*head = new;
+		*head = temp;
 
 	else
 	{
 		last_p = *head;
 		while (last_p->next != NULL)
 			last_p = last_p->next;
-		last_p->next = new;
+		last_p->next = temp;
 	}
 
 	return (*head);
