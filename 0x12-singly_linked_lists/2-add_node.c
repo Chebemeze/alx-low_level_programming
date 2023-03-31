@@ -36,7 +36,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	i = 0;
-	while (s[i])
+	while (str[i])
 	{
 		i++;
 	}
