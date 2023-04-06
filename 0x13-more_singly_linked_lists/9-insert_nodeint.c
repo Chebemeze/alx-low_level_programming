@@ -41,12 +41,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		secondptr = secondptr->next;
 		numb++;
 	}
+
 	if (secondptr->next == NULL)
 		return (NULL);
 
 	p = malloc(sizeof(listint_t));
-		if (p == NULL)
+	if (p == NULL)
 		return (NULL);
+
 	p->n = n;
 	p->next = secondptr->next;
 	secondptr->next = p;
