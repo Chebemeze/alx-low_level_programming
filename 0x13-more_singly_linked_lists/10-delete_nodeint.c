@@ -6,7 +6,7 @@
  *
  * @head: a pointer to the first node of the list.
  *
- * @idx: signifies where i.e address to delete node.
+ * @index: signifies where i.e address to delete node.
  *
  * Return: returns 1 if it deletes the node or -1 if it fails to
  * delete it. if index is greater than the list it also returns -1.
@@ -21,26 +21,30 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (head == NULL)
 		return (-1);
 
-	if (idx == 0)
+	if (index == 0)
 	{
-		p = secondptr;
-		rmv_ptr = p->next;
-		*head = rmv_ptr;
-		free(p);
+		if (*head == NULL)
+		{
+			return (-1);
+		}
+		p = secondptr->next;
+		*head = p;
+		free(secondptr);
+
 		return (1);
 	}
 
 	numb = 1;
-	while (numb < idx)
+	while (numb < index)
 	{
 		if (secondptr == NULL)
 			return (-1);
 		secondptr = secondptr->next;
 		numb++;
 	}
-	p = secondptr;
-	rmv_ptr = secondptr->next;
-	secondptr = rmv_ptr->next;
+	p = secondptr->next;
+	secondptr->next = p->next;
 	free(p);
+
 	return (1);
 }
