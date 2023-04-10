@@ -31,16 +31,15 @@ int main(int ac, char **av)
 		exit(97);
 	}
 
-	i = open(av[2], (O_WRONLY | O_CREAT | O_TRUNC), (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH));
 	j = open(av[1], O_RDONLY);
-	k = read(j, buff, 1024);
+	k = read(j, buff, (sizeof(char) *1024));
 	if (j == -1 || k == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: cant't read from file %s\n", av[1]);
-		close(i);
 		exit(98);
 	}
 
+	i = open(av[2], (O_WRONLY | O_CREAT | O_TRUNC), (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH));
 	m = write(i, buff, k);
 	if (m == -1 || i == -1)
 	{
