@@ -32,7 +32,7 @@ int main(int ac, char **av)
 	}
 
 	j = open(av[1], O_RDONLY);
-	k = read(j, buff, (sizeof(char) *1024));
+	k = read(j, buff, (sizeof(char) * 1024));
 	if (j == -1 || k == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: cant't read from file %s\n", av[1]);
